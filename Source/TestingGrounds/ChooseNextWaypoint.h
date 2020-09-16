@@ -7,7 +7,7 @@
 #include "BehaviorTree/BTNode.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "AIController.h"
-#include "PatrolingGuard.h" //TODO Remove coupling
+#include "PatrolRoute.h"
 #include "ChooseNextWaypoint.generated.h"
 
 /**
@@ -25,8 +25,5 @@ class TESTINGGROUNDS_API UChooseNextWaypoint : public UBTTaskNode
 
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
 	FBlackboardKeySelector WaypointKey;
-
-	UPROPERTY(EditAnywhere, Category = "Blackboard")
-	TArray<AActor*> PatrolPointsKey;
 	
 };
